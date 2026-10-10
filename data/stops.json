@@ -7,9 +7,8 @@
     "lat": 46.91734,
     "lon": -103.54941,
     "address": "3410 Chateau Road, Medora, ND 58645",
-    "blurb": "Start with the man, then go see the land that made him. Exhibits, the boardwalk and rooftop views over Medora and the badlands.",
-    "minMinutes": 60,
-    "idealMinutes": 120,
+    "blurb": "Plan on about 3½ hours for the exhibits, the boardwalk and the rooftop views over Medora and the badlands. See Roosevelt's story first, then go see the land that shaped him.",
+    "visitMinutes": 210,
     "lastEntryBeforeClose": 90,
     "ticketsUrl": "https://www.trlibrary.com/tickets",
     "visitUrl": "https://www.trlibrary.com/visit"

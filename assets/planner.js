@@ -1,6 +1,6 @@
 /*!
- * Got Two Hours? — route engine
- * Theodore Roosevelt Presidential Library · trnp-planner.labs.trlibrary.com
+ * Got Two Hours? \u2014 route engine
+ * Theodore Roosevelt Presidential Library \u00b7 trnp-planner.labs.trlibrary.com
  *
  * Pure functions, no DOM. Works in the browser (window.TRPlanner) and in Node (module.exports).
  * Every plan starts at the Library, then fills the rest of the time with the
@@ -10,7 +10,6 @@
   "use strict";
 
   var DRIVE_BUFFER = 1.1; // +10% over routed time: park speed limits, bison jams, photo stops
-  var PARK_SHARE = 0.5; // share of the time after arrival that goes to the Library (bounded by min/ideal)
   var DAYLIGHT_GRACE = 15; // minutes after sunset an outdoor stop may still end
 
   // ---------- small helpers ----------
@@ -135,7 +134,7 @@
   // ---------- route scheduling ----------
   // Walks a sequence of stops leaving the Library at `t`, returns timing or null if a rule breaks.
   function schedule(ctx, seq, t, endNode, deadline, opts) {
-    var at = "library", rows = [], prev = null, done = {};
+    var at = opts.origin || "library", rows = [], prev = null, done = {};
     for (var i = 0; i < seq.length; i++) {
       var s = seq[i];
       if (s.after && (!prev || prev.id !== s.after)) return null;
@@ -187,7 +186,7 @@
     if (n < 3 || n > 14) return { route: route, cur: cur };
     var FULL = 1 << n, INF = 1e9, dp = new Array(FULL * n), par = new Int16Array(FULL * n);
     for (var i = 0; i < dp.length; i++) dp[i] = INF;
-    for (var a = 0; a < n; a++) dp[(1 << a) * n + a] = ctx.drv("library", nodes[a]);
+    for (var a = 0; a < n; a++) dp[(1 << a) * n + a] = ctx.drv(opts.origin || "library", nodes[a]);
     for (var m = 1; m < FULL; m++) for (var j = 0; j < n; j++) {
       var v = dp[m * n + j]; if (v >= INF) continue;
       for (var k = 0; k < n; k++) if (!(m & (1 << k))) {
@@ -271,77 +270,64 @@
   }
 
   // ---------- main ----------
+  // input.minutes is time for the park. With input.library on (the default), the full
+  // Library visit (cfg.library.visitMinutes, about 3 1/2 hours) comes first and is not
+  // counted against it; with it off, the route is park-only from the starting point.
   function plan(data, input) {
     var ctx = data.ctx || buildContext(data.cfg, data.nps, data.drive);
     var cfg = ctx.cfg, lib = cfg.library;
+    var withLib = input.library !== false;
     var startDef = cfg.starts.filter(function (s) { return s.id === input.from; })[0] || cfg.starts[0];
     var fromNode = startDef.node;
     var endNode = input.end === "medora" ? "suvc" : input.end === "i94" ? "i94" : fromNode;
-    if (endNode === "suvc" && fromNode === "library" && input.end !== "medora") endNode = "library";
-    var T = input.minutes, t0 = input.start, deadline = t0 + T;
-    var res = { input: input, ok: false, warnings: [], items: [], parkAlerts: ctx.alerts, startLabel: startDef.label, endNode: endNode };
+    var T = input.minutes, t0 = input.start;
+    var res = { input: input, ok: false, warnings: [], items: [], parkAlerts: ctx.alerts, startLabel: startDef.label, endNode: endNode, withLibrary: withLib };
+    var nodeLabel = function (n) { return (cfg.nodes[n] && cfg.nodes[n].label) || n; };
+    var items = res.items;
+    items.push({ type: "start", time: t0, label: startDef.id === "library" ? (withLib ? "Start at the Library" : "Start in Medora") : "Start at " + nodeLabel(fromNode) });
 
-    var toLib = ctx.drv(fromNode, "library");
-    var arrive = t0 + toLib;
-    var day = libraryDay(data.avail, input.date);
-    var ent = libraryEntry(day, arrive, lib);
-    res.library = ent;
-    res.libraryDay = day;
-
-    if (ent.closedDay) { res.reason = "closed"; return res; }
-    if (ent.noSlot) { res.reason = ent.soldOut ? "soldout" : "noentry"; return res; }
-
-    var back = ctx.drv("library", endNode);
-    var room = deadline - ent.entry - back;
-    var L = clamp(round15(room * PARK_SHARE), lib.minMinutes, lib.idealMinutes);
-    if (ent.close != null) L = Math.min(L, ent.close - ent.entry);
-    if (room < lib.minMinutes) {
-      if (room >= 45 && (ent.close == null || ent.close - ent.entry >= 45)) {
-        L = Math.min(room, ent.close == null ? room : ent.close - ent.entry);
-        res.warnings.push("That leaves time for a quick Library visit only. The usual visit runs about two hours.");
-      } else {
-        res.reason = "short";
-        res.needMinutes = (ent.entry - t0) + lib.minMinutes + back;
-        return res;
+    var parkStart = t0, parkFrom = fromNode, L = 0;
+    if (withLib) {
+      var toLib = ctx.drv(fromNode, "library");
+      var arrive = t0 + toLib;
+      var day = libraryDay(data.avail, input.date);
+      var ent = libraryEntry(day, arrive, lib);
+      res.library = ent;
+      res.libraryDay = day;
+      if (ent.closedDay) { res.reason = "closed"; return res; }
+      if (ent.noSlot) { res.reason = ent.soldOut ? "soldout" : "noentry"; return res; }
+      var full = lib.visitMinutes || 210;
+      L = full;
+      if (ent.close != null && ent.close - ent.entry < full) {
+        L = ent.close - ent.entry;
+        if (L < 60) { res.reason = "closing"; return res; }
+        res.warnings.push("The Library closes at " + fmtClock(ent.close) + ", which leaves " + fmtDur(L) + " inside. The full visit takes about " + fmtDur(full) + ", so start earlier to see it all.");
+        res.shortLibrary = true;
       }
+      if (toLib) items.push({ type: "drive", time: t0, minutes: toLib, miles: ctx.miles(fromNode, "library"), to: "the Library" });
+      if (ent.entry > arrive) items.push({ type: "wait", time: arrive, minutes: ent.entry - arrive });
+      items.push({ type: "library", time: ent.entry, minutes: L, end: ent.entry + L, slot: ent.slot || null, known: ent.known });
+      parkStart = ent.entry + L; parkFrom = "library";
     }
-    if (L < 45) { res.reason = "closing"; return res; }
+    var deadline = parkStart + T;
 
-    var leaveLib = ent.entry + L;
     var vcHoursMap = {};
     Object.keys(ctx.vcs).forEach(function (name) {
       vcHoursMap[name] = vcHours(ctx.vcs[name], input.date, /North Unit/.test(name) ? 60 : 0);
     });
-    var opts = { sunset: input.sunset, vcHours: vcHoursMap };
+    var opts = { sunset: input.sunset, vcHours: vcHoursMap, origin: parkFrom };
     var cands = ctx.stops.filter(function (s) {
       if (s.closed) return false;
       if (input.accessible && !s.accessible) return false;
       return true;
     });
-    var route = pickStops(ctx, cands, leaveLib, endNode, deadline, opts, input.must);
-    // Give leftover time back to the Library, up to the usual two-hour visit.
-    if (route) {
-      var spare = deadline - route.finish, cap = Math.max(L, lib.idealMinutes);
-      if (ent.close != null) cap = Math.min(cap, ent.close - ent.entry);
-      var extra = Math.floor(Math.min(spare, cap - L) / 5) * 5;
-      if (extra >= 5) {
-        var re = schedule(ctx, route.route, leaveLib + extra, endNode, deadline, opts);
-        if (re) { L += extra; leaveLib += extra; re.route = route.route; route = re; }
-      }
-    }
-    if (!route) { // not even the drive home fits after the Library; shorten the Library visit
-      L = Math.max(45, deadline - back - ent.entry);
-      leaveLib = ent.entry + L;
-      route = { rows: [], finish: leaveLib + back, back: back, last: "library" };
+    var route = pickStops(ctx, cands, parkStart, endNode, deadline, opts, input.must);
+    if (!route) {
+      res.reason = "short";
+      res.needMinutes = ctx.drv(parkFrom, endNode);
+      return res;
     }
 
-    // ---------- build the itinerary ----------
-    var nodeLabel = function (n) { return (cfg.nodes[n] && cfg.nodes[n].label) || n; };
-    var items = res.items;
-    items.push({ type: "start", time: t0, label: startDef.id === "library" ? "Start at the Library" : "Start at " + nodeLabel(fromNode) });
-    if (toLib) items.push({ type: "drive", time: t0, minutes: toLib, miles: ctx.miles(fromNode, "library"), to: "the Library" });
-    if (ent.entry > arrive) items.push({ type: "wait", time: arrive, minutes: ent.entry - arrive });
-    items.push({ type: "library", time: ent.entry, minutes: L, end: ent.entry + L, slot: ent.slot || null, known: ent.known });
     var unitsSeen = {};
     route.rows.forEach(function (r) {
       if (r.drive) items.push({ type: "drive", time: r.arrive - r.drive, minutes: r.drive, miles: ctx.miles(r.from, r.stop.node), to: r.stop.name, firstInPark: !unitsSeen[r.stop.unit] && (r.stop.unit === "south" || r.stop.unit === "north") });
@@ -349,24 +335,25 @@
       items.push({ type: "stop", time: r.arrive, minutes: r.stop.minutes, end: r.leave, stop: r.stop });
     });
     if (route.back) items.push({ type: "drive", time: route.finish - route.back, minutes: route.back, miles: ctx.miles(route.last, endNode), to: nodeLabel(endNode) });
-    items.push({ type: "end", time: route.finish, label: endNode === "library" ? "Back at the Library" : "Arrive at " + nodeLabel(endNode) });
+    items.push({ type: "end", time: route.finish, label: endNode === "library" ? (withLib ? "Back at the Library" : "Back in Medora") : "Arrive at " + nodeLabel(endNode) });
 
     res.ok = true;
     res.libraryMinutes = L;
+    res.parkStart = parkStart;
     res.finish = route.finish;
     res.spare = deadline - route.finish;
     res.stops = route.rows.map(function (r) { return r.stop; });
     res.driveMinutes = items.filter(function (i) { return i.type === "drive"; }).reduce(function (a, i) { return a + i.minutes; }, 0);
     res.hasNorth = res.stops.some(function (s) { return s.unit === "north"; });
-    res.inPark = res.stops.some(function (s) { return s.unit === "south" || s.unit === "north" || s.unit === "elkhorn"; });
     res.skipped = ctx.stops.filter(function (s) { return s.closed; });
     res.has = function (id) { return res.stops.some(function (s) { return s.id === id; }); };
 
     // Directions link (Google Maps takes up to 9 waypoints).
-    var pts = [lib].concat(res.stops.filter(function (s, i, a) { return !i || a[i - 1].node !== s.node; }));
+    var stopPts = res.stops.filter(function (s, i, a) { return !i || a[i - 1].node !== s.node; });
+    var pts = withLib && fromNode !== "library" ? [lib].concat(stopPts) : stopPts;
     var ll = function (o) { return o.lat.toFixed(5) + "," + o.lon.toFixed(5); };
     var origin = cfg.nodes[fromNode], dest = cfg.nodes[endNode];
-    var wps = (fromNode === "library" ? pts.slice(1) : pts).slice(0, 9);
+    var wps = pts.slice(0, 9);
     res.mapsUrl = "https://www.google.com/maps/dir/?api=1&travelmode=driving&origin=" + encodeURIComponent(ll(origin)) +
       "&destination=" + encodeURIComponent(ll(dest)) + (wps.length ? "&waypoints=" + encodeURIComponent(wps.map(ll).join("|")) : "");
     return res;

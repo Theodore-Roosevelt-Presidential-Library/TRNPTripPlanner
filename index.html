@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Got Two Hours? Trip Planner — Theodore Roosevelt Presidential Library</title>
-<meta name="description" content="Pick your time and starting point and get a route that starts at the Theodore Roosevelt Presidential Library in Medora, then covers the best of Theodore Roosevelt National Park, checked against today's park alerts.">
+<title>Theodore Roosevelt National Park Trip Planner: Got Two Hours?</title>
+<meta name="description" content="Plan a visit to Theodore Roosevelt National Park around the time you have. Pick 90 minutes to a full day in the park and a starting point, and get a timed route through the South Unit, North Unit and Painted Canyon, checked against today's park alerts, with an optional first stop at the Theodore Roosevelt Presidential Library in Medora.">
 <link rel="canonical" href="https://trnp-planner.labs.trlibrary.com/">
-<meta property="og:title" content="Got Two Hours? Plan a Library and National Park visit in Medora">
-<meta property="og:description" content="A route built around your time: the Theodore Roosevelt Presidential Library first, then the overlooks, trails and wildlife of Theodore Roosevelt National Park.">
+<meta property="og:title" content="Theodore Roosevelt National Park Trip Planner: Got Two Hours?">
+<meta property="og:description" content="A route through Theodore Roosevelt National Park built around your time: overlooks, trails and wildlife, checked against today's park alerts.">
 <meta property="og:image" content="https://trnp-planner.labs.trlibrary.com/assets/hero-wind-canyon.jpg">
 <meta property="og:url" content="https://trnp-planner.labs.trlibrary.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%2325282A'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Georgia,serif' font-size='44' font-weight='bold' fill='%23ffffff'%3ET.R.%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/page.css">
 </head>
 <body>
 <header class="masthead">
@@ -26,68 +25,47 @@
 
 <div class="hero" style="background-image:url('assets/hero-wind-canyon.jpg')">
   <div class="wrap">
-    <div class="eyebrow">Medora, North Dakota · Theodore Roosevelt National Park</div>
+    <div class="eyebrow">Theodore Roosevelt National Park Trip Planner</div>
     <h1>Got two hours?</h1>
-    <p>Pick your time and where you're starting. Every route begins at the Theodore Roosevelt Presidential Library, then fills the rest with the best of the national park, checked against today's park alerts.</p>
+    <p>Pick how much time you have for the park and where you're starting, and get a route through Theodore Roosevelt National Park checked against today's park alerts. Start with a visit to the Theodore Roosevelt Presidential Library in Medora, where Roosevelt's Badlands story begins, or plan the park on its own.</p>
   </div>
   <div class="hero-credit">Wind Canyon and the Little Missouri River. NPS Photo/W. Archer</div>
 </div>
 
 <main>
-  <section class="planner wrap" aria-label="Trip planner">
-    <form class="ask" id="ask" onsubmit="return false">
-      <h2 class="embed-title">Got two hours?</h2>
-      <fieldset>
-        <legend>How much time do you have?</legend>
-        <div class="chips" id="q-time" role="group"></div>
-      </fieldset>
-      <fieldset>
-        <legend>Where are you starting?</legend>
-        <div class="starts" id="q-from" role="group"></div>
-      </fieldset>
-      <div class="row3">
-        <label>Day <select id="q-day"></select></label>
-        <label>Start time <select id="q-at"></select></label>
-        <label>Finish <select id="q-end">
-          <option value="start">Back where I started</option>
-          <option value="medora">In Medora</option>
-          <option value="i94">Back on I-94</option>
-        </select></label>
-      </div>
-      <label class="check"><input type="checkbox" id="q-acc"> Wheelchair-accessible park stops only</label>
-    </form>
-
-    <div id="alerts" class="alerts" hidden></div>
-    <div id="result" aria-live="polite"><p class="loading">Loading park data…</p></div>
-  </section>
+  <div class="planner-wrap wrap">
+    <div data-trnp-planner data-title="off"></div>
+  </div>
 
   <section class="embed-help wrap" id="embed" hidden>
     <h2>Put this planner on your site</h2>
-    <p>For trlibrary.com editors and partners. Paste into a Drupal Full HTML block (or any web page). The planner sizes itself to fit.</p>
+    <p>For trlibrary.com editors and partners. Paste into a Drupal Code (embed) block or any web page. The planner draws straight into the page (no iframe) and styles only itself.</p>
 <pre class="code">&lt;div data-trnp-planner&gt;&lt;/div&gt;
 &lt;script src="https://trnp-planner.labs.trlibrary.com/embed.js" async&gt;&lt;/script&gt;</pre>
     <p>Optional settings on the <code>div</code>:</p>
     <table class="opts">
       <tr><th>Attribute</th><th>What it does</th><th>Example</th></tr>
       <tr><td><code>data-from</code></td><td>Starting point picked on load: <code>library</code>, <code>south</code>, <code>north</code> or <code>i94</code></td><td><code>data-from="i94"</code></td></tr>
-      <tr><td><code>data-time</code></td><td>Minutes picked on load: 90, 120, 180, 240, 360 or 540</td><td><code>data-time="240"</code></td></tr>
-      <tr><td><code>data-min-height</code></td><td>Starting height in pixels before the planner reports its size</td><td><code>data-min-height="900"</code></td></tr>
+      <tr><td><code>data-time</code></td><td>Park minutes picked on load: 90, 120, 180, 240, 360 or 540 (a Library visit, when included, comes on top)</td><td><code>data-time="240"</code></td></tr>
+      <tr><td><code>data-title</code></td><td><code>off</code> hides the planner's own "Got two hours?" heading when the page already has one</td><td><code>data-title="off"</code></td></tr>
+      <tr><td><code>data-sticky-top</code></td><td>Pixels to keep the map clear of a fixed site header while scrolling</td><td><code>data-sticky-top="110"</code></td></tr>
     </table>
-    <p>Links work too: <a href="?from=i94&amp;t=120">trnp-planner.labs.trlibrary.com/?from=i94&amp;t=120</a> opens the two-hour plan for I-94 travelers. Add <code>&amp;utm_source=…</code> for campaign tracking.</p>
+    <p>Links work too: <a href="?from=i94&amp;t=120">trnp-planner.labs.trlibrary.com/?from=i94&amp;t=120</a> opens the two-hour plan for I-94 travelers. The same parameters work on any page that embeds the planner, and the planner keeps them in the address bar so Copy link shares the exact plan.</p>
   </section>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <p><b>Where this comes from.</b> Park stops, photos, visitor center hours and alerts: <a href="https://www.nps.gov/subjects/developer/api-documentation.htm" target="_blank" rel="noopener">National Park Service API</a> <span id="nps-stamp"></span>. Library entry times: the Library's ticketing system. Drive times: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> roads via OSRM, plus a 10% cushion for park roads and wildlife. Map tiles: USGS The National Map.</p>
-    <p>Roads and trails change with the weather. Check <a href="https://www.nps.gov/thro/planyourvisit/conditions.htm" target="_blank" rel="noopener">current park conditions</a> before you go. The North Unit runs on Central Time; times here are Mountain Time.</p>
-    <p>More from Library Labs: <a href="https://wildlife.labs.trlibrary.com/">Wildlife Watch</a> · <a href="https://elkhornguide.labs.trlibrary.com/">Elkhorn Ranch guide</a> · <a href="https://aurora.labs.trlibrary.com/">Northern Lights Watch</a> · <a href="https://lodging.labs.trlibrary.com/">Find lodging</a> · <a href="#embed" id="embed-link">Put this planner on your site</a></p>
+    <p>A Theodore Roosevelt Presidential Library Labs tool. More from Library Labs: <a href="https://wildlife.labs.trlibrary.com/">Wildlife Watch</a> · <a href="https://elkhornguide.labs.trlibrary.com/">Elkhorn Ranch guide</a> · <a href="https://aurora.labs.trlibrary.com/">Northern Lights Watch</a> · <a href="https://lodging.labs.trlibrary.com/">Find lodging</a> · <a href="#embed">Put this planner on your site</a></p>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="assets/sun.js"></script>
-<script src="assets/planner.js"></script>
-<script src="assets/app.js"></script>
+<script src="embed.js"></script>
+<script>
+  (function () {
+    function show() { var on = location.hash === "#embed", el = document.getElementById("embed"); el.hidden = !on; if (on) el.scrollIntoView(); }
+    window.addEventListener("hashchange", show); show();
+  })();
+</script>
 </body>
 </html>

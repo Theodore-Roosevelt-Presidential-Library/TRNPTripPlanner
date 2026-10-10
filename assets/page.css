@@ -1,0 +1,36 @@
+/* Standalone page chrome for trnp-planner.labs.trlibrary.com (the planner itself is styled by planner.css). */
+@font-face { font-family: "Dharma Gothic E"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("https://www.trlibrary.com/themes/custom/trpl/css/dharma_type-dharmagothice-bold.woff2") format("woff2"); }
+@font-face { font-family: "Clearface"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("https://www.trlibrary.com/themes/custom/trpl/css/clearfacestd-regular.woff2") format("woff2"); }
+@font-face { font-family: "Frutiger"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("https://www.trlibrary.com/themes/custom/trpl/css/frutigerltstd-regular.woff2") format("woff2"); }
+@font-face { font-family: "Frutiger"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("https://www.trlibrary.com/themes/custom/trpl/css/frutigerltstd-bold.woff2") format("woff2"); }
+* { box-sizing: border-box; }
+body { margin: 0; background: #FBFAF6; color: #25282A; font: 18px/1.5 "Clearface", Georgia, serif; -webkit-font-smoothing: antialiased; }
+a { color: #1B4633; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+.masthead { background: #25282A; }
+.masthead .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 58px; }
+.masthead img { height: 30px; width: auto; display: block; }
+.masthead a { color: #fff; font: 14px "Frutiger", system-ui, sans-serif; text-decoration: none; opacity: .85; }
+.hero { position: relative; min-height: 470px; display: flex; align-items: flex-end; color: #fff; background: #1d2b22 center 60%/cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,20,14,.45) 0%, rgba(10,20,14,.15) 35%, rgba(10,20,14,.82) 100%); }
+.hero .wrap { position: relative; padding: 110px 20px; width: 100%; }
+.hero h1 { font: 700 clamp(62px, 11vw, 140px)/.95 "Dharma Gothic E", "Oswald", sans-serif; text-transform: uppercase; margin: 0; }
+.hero p { font-size: 21px; max-width: 700px; margin: 10px 0 0; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
+.eyebrow { font: 700 12px "Frutiger", system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #fff; opacity: .9; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.hero-credit { position: absolute; right: 12px; top: 8px; font: 11px "Frutiger", system-ui, sans-serif; color: rgba(255,255,255,.7); z-index: 1; }
+main .planner-wrap { position: relative; margin-top: -80px; padding-bottom: 60px; }
+.embed-help { padding: 10px 20px 70px; }
+.embed-help h2 { font: 700 52px/.95 "Dharma Gothic E", "Oswald", sans-serif; text-transform: uppercase; color: #163728; margin: 0 0 10px; }
+pre.code { background: #25282A; color: #f3efe7; border-radius: 8px; padding: 12px 14px; overflow-x: auto; font: 13px/1.5 ui-monospace, Menlo, monospace; }
+code { font-family: ui-monospace, Menlo, monospace; font-size: .86em; }
+table.opts { width: 100%; border-collapse: collapse; font: 15px "Frutiger", system-ui, sans-serif; background: #fff; }
+table.opts th, table.opts td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #e2ddd0; vertical-align: top; }
+table.opts th { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #5d625f; }
+footer.site { background: #25282A; color: rgba(255,255,255,.8); padding: 30px 0; font: 14px/1.6 "Frutiger", system-ui, sans-serif; }
+footer.site a { color: #fff; }
+@media (max-width: 640px) { .hero .wrap { padding-bottom: 100px; } }
+@media print { .masthead, .hero, footer.site, .embed-help { display: none !important; } main .planner-wrap { margin-top: 0; } }
