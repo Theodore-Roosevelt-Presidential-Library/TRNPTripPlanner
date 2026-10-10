@@ -1,0 +1,456 @@
+{
+  "_readme": "Curated stops for the planner. NPS text, photos, durations and amenities are pulled from data/nps.json by the 'thing' (NPS things-to-do id) and 'place' (NPS places id) fields. 'minutes' is time at the stop; 'score' (1-10) is how strongly the planner favors it. Set \"closed\": true with a \"closedNote\" to pull a stop from every plan; set \"ignoreAlerts\": true if an alert is wrongly closing a stop. 'node' must match an id in data/drive.json.",
+  "library": {
+    "id": "library",
+    "name": "Theodore Roosevelt Presidential Library",
+    "node": "library",
+    "lat": 46.91734,
+    "lon": -103.54941,
+    "address": "3410 Chateau Road, Medora, ND 58645",
+    "blurb": "Start with the man, then go see the land that made him. Exhibits, the boardwalk and rooftop views over Medora and the badlands.",
+    "minMinutes": 60,
+    "idealMinutes": 120,
+    "lastEntryBeforeClose": 90,
+    "ticketsUrl": "https://www.trlibrary.com/tickets",
+    "visitUrl": "https://www.trlibrary.com/visit"
+  },
+  "starts": [
+    {
+      "id": "library",
+      "label": "The Library",
+      "sub": "Already in Medora",
+      "node": "library"
+    },
+    {
+      "id": "south",
+      "label": "South Unit",
+      "sub": "Medora visitor center",
+      "node": "suvc"
+    },
+    {
+      "id": "north",
+      "label": "North Unit",
+      "sub": "Near Watford City",
+      "node": "nuvc"
+    },
+    {
+      "id": "i94",
+      "label": "I-94",
+      "sub": "Passing through Medora",
+      "node": "i94"
+    }
+  ],
+  "nodes": {
+    "library": {
+      "lat": 46.91734,
+      "lon": -103.54941,
+      "label": "the Library"
+    },
+    "suvc": {
+      "lat": 46.9165,
+      "lon": -103.52621,
+      "label": "the South Unit Visitor Center"
+    },
+    "nuvc": {
+      "lat": 47.6,
+      "lon": -103.2601,
+      "label": "the North Unit Visitor Center"
+    },
+    "i94": {
+      "lat": 46.905,
+      "lon": -103.5005,
+      "label": "I-94 at Medora"
+    },
+    "skyline": {
+      "lat": 46.93409,
+      "lon": -103.53299,
+      "label": "Skyline Vista"
+    },
+    "prairiedog": {
+      "lat": 46.95381,
+      "lon": -103.50922,
+      "label": "Prairie dog town"
+    },
+    "peaceful": {
+      "lat": 46.95895,
+      "lon": -103.50414,
+      "label": "Peaceful Valley Ranch"
+    },
+    "wind": {
+      "lat": 46.98868,
+      "lon": -103.48528,
+      "label": "Wind Canyon"
+    },
+    "scoria": {
+      "lat": 46.93148,
+      "lon": -103.48535,
+      "label": "Scoria Point Overlook"
+    },
+    "ridgeline": {
+      "lat": 46.92189,
+      "lon": -103.46308,
+      "label": "Ridgeline Nature Trail"
+    },
+    "badlandsov": {
+      "lat": 46.92194,
+      "lon": -103.45221,
+      "label": "Badlands Overlook"
+    },
+    "coalvein": {
+      "lat": 46.92449,
+      "lon": -103.40189,
+      "label": "Coal Vein Trail"
+    },
+    "buckhill": {
+      "lat": 46.92661,
+      "lon": -103.38979,
+      "label": "Buck Hill"
+    },
+    "boicourt": {
+      "lat": 46.96301,
+      "lon": -103.4054,
+      "label": "Boicourt Overlook and Trail"
+    },
+    "paintedcanyon": {
+      "lat": 46.89585,
+      "lon": -103.38154,
+      "label": "Painted Canyon Nature Trail"
+    },
+    "elkhorn": {
+      "lat": 47.23499,
+      "lon": -103.62724,
+      "label": "Elkhorn Ranch"
+    },
+    "littlemo": {
+      "lat": 47.5948,
+      "lon": -103.33391,
+      "label": "Little Mo Nature Trail"
+    },
+    "cannonball": {
+      "lat": 47.59643,
+      "lon": -103.33247,
+      "label": "Cannonball Concretions"
+    },
+    "riverbend": {
+      "lat": 47.60895,
+      "lon": -103.37789,
+      "label": "River Bend Overlook"
+    },
+    "oxbow": {
+      "lat": 47.60272,
+      "lon": -103.44161,
+      "label": "Oxbow Overlook"
+    }
+  },
+  "stops": [
+    {
+      "id": "maltese",
+      "name": "Maltese Cross Cabin",
+      "node": "suvc",
+      "unit": "south",
+      "thing": "F1792F2E-F89B-4C99-9202-4FF84007ADD7",
+      "place": "510530D4-64BA-4755-9E30-3FF9B7C954E3",
+      "minutes": 15,
+      "score": 9,
+      "needsVC": "South Unit Visitor Center",
+      "keys": [
+        "maltese cross",
+        "south unit visitor center"
+      ],
+      "tr": "Roosevelt's first home in the badlands, now behind the South Unit Visitor Center."
+    },
+    {
+      "id": "film",
+      "name": "South Unit Visitor Center and park film",
+      "node": "suvc",
+      "unit": "south",
+      "thing": "28F269B2-21C8-460A-B44C-1CED5BC82C57",
+      "minutes": 25,
+      "score": 3,
+      "needsVC": "South Unit Visitor Center",
+      "keys": [
+        "south unit visitor center"
+      ]
+    },
+    {
+      "id": "skyline",
+      "name": "Skyline Vista",
+      "node": "skyline",
+      "unit": "south",
+      "thing": "6487C2E3-3AE5-4D03-8633-39182E173BE4",
+      "place": "DDB76BB3-A845-48A0-9455-62D45A33B9B7",
+      "minutes": 10,
+      "score": 5,
+      "outdoor": true,
+      "keys": [
+        "skyline vista",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "prairiedog",
+      "name": "Prairie dog town",
+      "node": "prairiedog",
+      "unit": "south",
+      "place": "0F2BC1FA-A626-4934-A7AA-8812211FC4DF",
+      "minutes": 10,
+      "score": 6,
+      "outdoor": true,
+      "blurb": "A black-tailed prairie dog town right beside the Scenic Loop Drive. Watch from the pullout and give them room.",
+      "keys": [
+        "prairie dog",
+        "scenic loop",
+        "scenic drive"
+      ],
+      "link": {
+        "label": "Wildlife Watch",
+        "url": "https://wildlife.labs.trlibrary.com/?species=prairie-dog"
+      }
+    },
+    {
+      "id": "peaceful",
+      "name": "Peaceful Valley Ranch",
+      "node": "peaceful",
+      "unit": "south",
+      "place": "B5325964-009F-4CBB-9B3A-41B739ABFC69",
+      "minutes": 10,
+      "score": 3,
+      "outdoor": true,
+      "keys": [
+        "peaceful valley",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "scoria",
+      "name": "Scoria Point Overlook",
+      "node": "scoria",
+      "unit": "south",
+      "place": "12CE9A31-5D4D-465A-98C4-41B4C8E43DCB",
+      "minutes": 5,
+      "score": 4,
+      "outdoor": true,
+      "blurb": "A quick pullout over red scoria, rock baked hard by burning seams of coal.",
+      "keys": [
+        "scoria point",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "wind",
+      "name": "Wind Canyon",
+      "node": "wind",
+      "unit": "south",
+      "thing": "E4EA081A-9A5E-4789-97B8-94E0169FE82B",
+      "place": "C383AB68-A193-45F0-A108-F1199884A122",
+      "minutes": 25,
+      "score": 9,
+      "outdoor": true,
+      "keys": [
+        "wind canyon",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "ridgeline",
+      "name": "Ridgeline Nature Trail",
+      "node": "ridgeline",
+      "unit": "south",
+      "place": "00033499-52E2-4DE1-BCFE-F20E64F5312A",
+      "minutes": 30,
+      "score": 4,
+      "outdoor": true,
+      "blurb": "A short self-guided nature trail up a ridge along the Scenic Loop Drive.",
+      "keys": [
+        "ridgeline",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "badlandsov",
+      "name": "Badlands Overlook",
+      "node": "badlandsov",
+      "unit": "south",
+      "place": "257B0079-1785-4C4C-90A7-A2D8EC718EBB",
+      "minutes": 10,
+      "score": 5,
+      "outdoor": true,
+      "keys": [
+        "badlands overlook",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "boicourt",
+      "name": "Boicourt Overlook and Trail",
+      "node": "boicourt",
+      "unit": "south",
+      "thing": "9690A7FB-9EF0-4BA4-9EE9-D6FA00D8141A",
+      "place": "7E43270A-D8A5-4EED-B96A-28DAF9329A85",
+      "minutes": 25,
+      "score": 7,
+      "outdoor": true,
+      "keys": [
+        "boicourt",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "coalvein",
+      "name": "Coal Vein Trail",
+      "node": "coalvein",
+      "unit": "south",
+      "thing": "719D9665-7F2D-40C9-B170-9EDCD92ED2F5",
+      "place": "EAD0A579-C231-4E8E-AE62-EB0FF29E604D",
+      "minutes": 40,
+      "score": 4,
+      "outdoor": true,
+      "keys": [
+        "coal vein",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "buckhill",
+      "name": "Buck Hill",
+      "node": "buckhill",
+      "unit": "south",
+      "thing": "32B5B2B0-4DDD-4AA9-B75B-13A661CB93AB",
+      "place": "A9DDC05C-7CEC-4ACB-BBBE-5CD769C55BDA",
+      "minutes": 20,
+      "score": 6,
+      "outdoor": true,
+      "keys": [
+        "buck hill",
+        "scenic loop",
+        "scenic drive"
+      ]
+    },
+    {
+      "id": "paintedcanyon",
+      "name": "Painted Canyon Overlook",
+      "node": "paintedcanyon",
+      "unit": "i94",
+      "place": "456C4F8C-859E-45B2-A4B2-0D29BAFEFAC6",
+      "minutes": 15,
+      "score": 7,
+      "outdoor": true,
+      "blurb": "The big first look at the badlands, right off I-94 east of Medora at the Painted Canyon rest area.",
+      "keys": [
+        "painted canyon"
+      ]
+    },
+    {
+      "id": "paintedtrail",
+      "name": "Painted Canyon Nature Trail",
+      "node": "paintedcanyon",
+      "unit": "i94",
+      "thing": "A974C3C2-EA5A-4416-9051-8E280586AD2E",
+      "minutes": 55,
+      "score": 4,
+      "outdoor": true,
+      "after": "paintedcanyon",
+      "keys": [
+        "painted canyon"
+      ]
+    },
+    {
+      "id": "elkhorn",
+      "name": "Elkhorn Ranch",
+      "node": "elkhorn",
+      "unit": "elkhorn",
+      "thing": "33450E51-C500-4A35-B0C8-C9F4112E6C76",
+      "place": "3BF6876C-127E-4A49-8B81-7958E5D0B75D",
+      "minutes": 60,
+      "score": 10,
+      "outdoor": true,
+      "keys": [
+        "elkhorn"
+      ],
+      "tr": "Roosevelt's home ranch on the Little Missouri River, built after he lost his wife and mother on the same day in 1884.",
+      "tip": "Gravel roads most of the way. Check conditions before you go, especially after rain. No services at the site.",
+      "link": {
+        "label": "Elkhorn Ranch walking guide",
+        "url": "https://elkhornguide.labs.trlibrary.com/"
+      }
+    },
+    {
+      "id": "nuvc",
+      "name": "North Unit Visitor Center",
+      "node": "nuvc",
+      "unit": "north",
+      "minutes": 15,
+      "score": 3,
+      "needsVC": "North Unit Visitor Center",
+      "blurb": "Maps, rangers, restrooms and the park film at the start of the North Unit Scenic Drive.",
+      "keys": [
+        "north unit visitor center"
+      ]
+    },
+    {
+      "id": "littlemo",
+      "name": "Little Mo Nature Trail",
+      "node": "littlemo",
+      "unit": "north",
+      "thing": "25C57A41-6C1C-4C44-ACB3-CC0A96D161D4",
+      "minutes": 40,
+      "score": 4,
+      "outdoor": true,
+      "keys": [
+        "little mo",
+        "north unit scenic"
+      ]
+    },
+    {
+      "id": "cannonball",
+      "name": "Cannonball Concretions",
+      "node": "cannonball",
+      "unit": "north",
+      "thing": "D4F02C75-972B-4D9E-9DC2-AA4FC3CB09C1",
+      "place": "B367E30B-5FC0-4980-8A89-7139B2801523",
+      "minutes": 10,
+      "score": 6,
+      "outdoor": true,
+      "keys": [
+        "cannonball",
+        "north unit scenic"
+      ]
+    },
+    {
+      "id": "riverbend",
+      "name": "River Bend Overlook",
+      "node": "riverbend",
+      "unit": "north",
+      "place": "C627B675-3878-4F43-AD4B-A689A7D9D8BA",
+      "minutes": 15,
+      "score": 8,
+      "outdoor": true,
+      "keys": [
+        "river bend",
+        "north unit scenic"
+      ]
+    },
+    {
+      "id": "oxbow",
+      "name": "Oxbow Overlook",
+      "node": "oxbow",
+      "unit": "north",
+      "place": "7D5A46B3-DAD7-4E01-8326-001AF5FD3176",
+      "minutes": 15,
+      "score": 8,
+      "outdoor": true,
+      "keys": [
+        "oxbow",
+        "north unit scenic"
+      ]
+    }
+  ]
+}

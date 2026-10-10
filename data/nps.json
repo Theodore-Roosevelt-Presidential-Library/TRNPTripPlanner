@@ -1,0 +1,673 @@
+{
+ "alerts": [
+  {
+   "id": "5DAFD8CE-ED3D-4C75-BBBC-EC5EBC5010D5",
+   "title": "Theodore Roosevelt National Park moves to cashless fee collection",
+   "category": "Information",
+   "description": "Starting May 1, Theodore Roosevelt National Park will accept only credit cards, debit cards, or digital payments for entrance fees, campground fees, and Interagency Passes. Cash and check payments will no longer be accepted.",
+   "url": "https://www.nps.gov/thro/learn/news/theodore-roosevelt-national-park-to-move-to-cashless-fee-collection-starting-may-1.htm",
+   "updated": "2026-03-31 00:00:00.0"
+  },
+  {
+   "id": "70B82CA0-42C9-40C8-ADB5-1D110B8A04F8",
+   "title": "South Unit Address for Mobile Maps – Theodore Roosevelt NP",
+   "category": "Information",
+   "description": "On all maps used on mobile devices, use the following address to reach the South Unit Visitor Center and Entrance Station 201 East River Road N. Medora, ND 58645",
+   "url": "",
+   "updated": "2025-09-18 00:00:00.0"
+  },
+  {
+   "id": "F8289D3C-4DAE-4F2A-A625-5BA53492ECDD",
+   "title": "Petrified Forest Trailhead Access Update: Use Approved Route",
+   "category": "Information",
+   "description": "Directions to the Petrified Forest trailhead have changed. Please use the approved legal route from I-94, Exit 10 toward Camels Hump Lake and follow the clearly marked posts. This update helps maintain good cooperation with neighbors and respect park boundaries. For precise directions, use the link provided.",
+   "url": "https://www.nps.gov/thingstodo/hike-the-petrified-forest.htm",
+   "updated": "2025-09-17 00:00:00.0"
+  }
+ ],
+ "alertsUpdated": "2026-10-10T05:56:00.376Z",
+ "things": {
+  "6487C2E3-3AE5-4D03-8633-39182E173BE4": {
+   "title": "Hike Skyline Vista Trail",
+   "url": "https://www.nps.gov/thingstodo/hike-skyline-vista-trail.htm",
+   "summary": "Skyline Vista Trail is a great accessible introduction to Theodore Roosevelt National Park.",
+   "duration": "5-15 Minutes",
+   "durationNote": "The Skyline Vista Trail is a 0.1 mile round-trip accessible hike to an overlook with seating.",
+   "accessibility": "Skyline Vista Trail is a fully paved and accessible trail. Accessible parking is located right at the trailhead. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "Pets are welcome in Theodore Roosevelt National Park. However, they are only allowed in certain areas. Leashed pets may be walked along roads and road shoulders, parking areas, and in campgrounds and picnic areas. More information: Visiting with Pets .",
+   "lat": 46.935163,
+   "lon": -103.531274,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/EAF89F52-CFF7-769A-25C1EC2CC0A523EF.jpg",
+    "credit": "NPS Photo/L. Eddy",
+    "alt": "A trailhead sign next to a paved trail in a grassy area. Buttes are visible on the horizon."
+   }
+  },
+  "33450E51-C500-4A35-B0C8-C9F4112E6C76": {
+   "title": "Visit the Elkhorn Ranch Unit",
+   "url": "https://www.nps.gov/thingstodo/visit-the-elkhorn-ranch-unit.htm",
+   "summary": "Visit the location of Theodore Roosevelt's home ranch, the Elkhorn, and experience the solitude of the North Dakota badlands.",
+   "duration": "3-6 Hours",
+   "durationNote": "The Elkhorn Ranch Unit is remote, located between the North and South units. Visitors should plan for a drive of approximately 90 minutes each way, with time to hike and explore at the Elkhorn unit itself.",
+   "accessibility": "The Elkhorn Ranch unit is a remote, 218-acre site with a flat 0.7 mile mowed trail leading to the former location of the Elkhorn Ranch cabin. The ground can be slippery in inclement weather. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "",
+   "lat": 47.234929,
+   "lon": -103.62739,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/259B8273-A909-6184-892115B11112D62D.jpg",
+    "credit": "Historic photo taken by Theodore Roosevelt",
+    "alt": "A black and white photo of a low ranch house, with a porch. Elk antlers hang on the walls."
+   }
+  },
+  "719D9665-7F2D-40C9-B170-9EDCD92ED2F5": {
+   "title": "Hike Coal Vein Trail",
+   "url": "https://www.nps.gov/thingstodo/hike-coal-vein-trail.htm",
+   "summary": "Take a hike on this 0.8-mile loop and learn about the geology of Theodore Roosevelt National Park.",
+   "duration": "30-45 Minutes",
+   "durationNote": "",
+   "accessibility": "Coal Vein Trail is an unpaved trail which includes uneven footing, steep stairs, and potential slip hazards. Hikers should keep away from steep cliff edges. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "Pets are welcome in Theodore Roosevelt National Park. However, they are only allowed in certain areas. Leashed pets may be walked along roads and road shoulders, sidewalks, parking areas, and in campgrounds and picnic areas. More information: Visiting with Pets .",
+   "lat": 46.924551,
+   "lon": -103.401947,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/C6B94D20-AFD9-A45E-829A0AAAF9AD09C3.jpg",
+    "credit": "NPS Photo/L. Thomas",
+    "alt": "A trail winds through low buttes under a blue sky, with grass and flowers growing around it."
+   }
+  },
+  "E4EA081A-9A5E-4789-97B8-94E0169FE82B": {
+   "title": "Hike Wind Canyon Trail",
+   "url": "https://www.nps.gov/thingstodo/hike-wind-canyon-trail.htm",
+   "summary": "Wind Canyon trail is a short, moderate-difficulty trail that rewards hikers with incredible views of the Little Missouri river and the surrounding badlands.",
+   "duration": "5-30 Minutes",
+   "durationNote": "The Wind Canyon trail is a 0.3 mile loop, with scenic views along its length.",
+   "accessibility": "Wind Canyon Trail is an unpaved trail which includes uneven footing, steps, and potential slip hazards. There is a very small seating area approximately halfway along the trail. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "Pets are welcome in Theodore Roosevelt National Park. However, they are only allowed in certain areas. Leashed pets may be walked along roads and road shoulders, sidewalks, parking areas, and in campgrounds and picnic areas. More information: Visiting with Pets .",
+   "lat": 46.988691,
+   "lon": -103.485254,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/E799FD43-DDA4-E371-B4D88B34FB9ED24E.jpg",
+    "credit": "NPS Photo/W. Archer",
+    "alt": "A bend in the river and a trail above it are seen at sunset. Buttes and prairies line the river."
+   }
+  },
+  "9690A7FB-9EF0-4BA4-9EE9-D6FA00D8141A": {
+   "title": "Hike Boicourt Trail",
+   "url": "https://www.nps.gov/thingstodo/hike-boicourt-trail.htm",
+   "summary": "This short hike, with its elevated perspective and accessible trail, offers a unique view of the Little Missouri Badlands that the whole family can enjoy.",
+   "duration": "15-30 Minutes",
+   "durationNote": "",
+   "accessibility": "The Boicourt Trail is approximately 0.2 miles long and 3 feet wide. It is fully paved. An unpaved social trail continues for approximately another 0.2 miles to an overlook. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "Pets are welcome in Theodore Roosevelt National Park. However, they are only allowed in certain areas. Leashed pets may be walked along roads and road shoulders, sidewalks, parking areas, and in campgrounds and picnic areas. More information: Visiting with Pets .",
+   "lat": 46.959367,
+   "lon": -103.401854,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/F88B4ACA-AA94-8538-26B1D64662450193.jpg",
+    "credit": "NPS Photo/L. Thomas",
+    "alt": "The badlands, including a view down into a sandy bottomed valley and large buttes under a cloudy sky"
+   }
+  },
+  "F1792F2E-F89B-4C99-9202-4FF84007ADD7": {
+   "title": "Visit Theodore Roosevelt's Maltese Cross Cabin",
+   "url": "https://www.nps.gov/thingstodo/visit-theodore-roosevelt-s-maltese-cross-cabin.htm",
+   "summary": "The Maltese Cross Cabin was Theodore Roosevelt's first home in Dakota territory. Step inside and learn about how he lived during his time in the badlands where the romance of his life began.",
+   "duration": "5-20 Minutes",
+   "durationNote": "",
+   "accessibility": "The Maltese Cross Cabin is accessible, with a short ramp leading into the cabin interior, though the door may be too narrow (25 inches across) to accommodate all assistive devices. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "Pets are welcome in Theodore Roosevelt National Park. However, they are only allowed in certain areas. Leashed pets may be walked along roads and road shoulders, sidewalks, parking areas, and in campgrounds and picnic areas. More information: Visiting with Pets .",
+   "lat": 46.91696,
+   "lon": -103.526279,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/C48A9E5F-07C1-65F9-3BAF166937B1046D.jpg",
+    "credit": "NPS Photo",
+    "alt": "A log cabin sits in a grassy area on the other side of a wooden fence, trees and blue sky behind it."
+   }
+  },
+  "25C57A41-6C1C-4C44-ACB3-CC0A96D161D4": {
+   "title": "Hike The Little Mo Nature Trail",
+   "url": "https://www.nps.gov/thingstodo/hike-the-little-mo-nature-trail.htm",
+   "summary": "Take a short hike along the Little Mo Nature Trail and learn about the nature and geology of Theodore Roosevelt National Park!",
+   "duration": "30-45 Minutes",
+   "durationNote": "",
+   "accessibility": "The Little Mo Nature Trail is approximately five feet wide and has a 0.7 mile paved inner loop and an additional 0.7 mile outer loop that has unpaved sections and steep stairs. The trail may contain uneven footing and slip or trip hazards. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "",
+   "lat": 47.5948,
+   "lon": -103.33391,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/BAD2BE93-0B78-DAA0-F1AD8C1A60816CB5.jpg",
+    "credit": "NPS Photo",
+    "alt": "A paved trail leads to a bridge over a creek. A picnic shelter is seen behind some trees."
+   }
+  },
+  "28F269B2-21C8-460A-B44C-1CED5BC82C57": {
+   "title": "Watch the Theodore Roosevelt National Park Film: Refuge of the American Spirit",
+   "url": "https://www.nps.gov/thingstodo/watch-the-theodore-roosevelt-national-park-film-refuge-of-the-american-spirit.htm",
+   "summary": "Visit one of the visitor centers and watch the Theodore Roosevelt National Park film, Refuge of the American Spirit.",
+   "duration": "17 Minutes",
+   "durationNote": "",
+   "accessibility": "The park film is shown in the North and South Unit visitor centers, both of which are accessible. Assitive listening devices and audio description of the film are available upon request. Service animals are allowed, but must be on a leash no longer than 6 feet. More information: Accessibility in Theodore Roosevelt National Park .",
+   "pets": "",
+   "lat": null,
+   "lon": null,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/59BB4B8F-D427-0B39-E2BEEC641891F299.jpg",
+    "credit": "NPS Photo/A. Hoffman",
+    "alt": "The sun is just visible over a badlands scene. Juniper grow on the buttes, and there are low clouds."
+   }
+  },
+  "32B5B2B0-4DDD-4AA9-B75B-13A661CB93AB": {
+   "title": "Hike up Buck Hill",
+   "url": "https://www.nps.gov/thingstodo/hike-up-buck-hill.htm",
+   "summary": "Hike to the top of Buck Hill, one of the highest points in the park, and get an amazing 360° view of the surrounding badlands!",
+   "duration": "5-30 Minutes",
+   "durationNote": "",
+   "accessibility": "Buck Hill is a steep climb up a paved trail which transitions into dirt at the top. The trail contains uneven footing, steps, and potential trip or slip hazards. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "Pets are welcome in Theodore Roosevelt National Park. However, they are only allowed in certain areas. Leashed pets may be walked along roads and road shoulders, sidewalks, parking areas, and in campgrounds and picnic areas. More information: Visiting with Pets .",
+   "lat": 46.926569,
+   "lon": -103.389452,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/2B4C131C-9E68-501E-DB9A29617AA0ED94.jpg",
+    "credit": "NPS Photo/S. Ng",
+    "alt": "Two children sit on the edge of a rock ledge and gaze out over the badlands, juniper, and trails."
+   }
+  },
+  "A974C3C2-EA5A-4416-9051-8E280586AD2E": {
+   "title": "Hike the Painted Canyon Nature Trail",
+   "url": "https://www.nps.gov/thingstodo/hike-the-painted-canyon-nature-trail.htm",
+   "summary": "Painted Canyon Trail is a 1-mile loop trail located just off Interstate 94 near the Painted Canyon Visitor Center. It offers a great introduction to Theodore Roosevelt National Park, whether visitors are just passing through or planning on a multi-day stay.",
+   "duration": "30-80 Minutes",
+   "durationNote": "",
+   "accessibility": "Painted Canyon Nature Trail is an unpaved trail which includes uneven footing, steps, and potential slip hazards. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "",
+   "lat": 46.895169,
+   "lon": -103.382851,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/F1A318EE-B3AA-38B1-DA143F412C5B4E65.jpg",
+    "credit": "NPS Photo/J. Houghton",
+    "alt": "A view up a trail towards a butte through junipers. A trail marker reads Painted Canyon."
+   }
+  },
+  "D4F02C75-972B-4D9E-9DC2-AA4FC3CB09C1": {
+   "title": "Explore the Cannonball Concretions",
+   "url": "https://www.nps.gov/thingstodo/explore-the-cannonball-concretions.htm",
+   "summary": "The cannonball concretions are an arresting and unusual geological formation. Stop at this pullout to explore their mysteries!",
+   "duration": "5-15 Minutes",
+   "durationNote": "The cannonball concretions are contained to a relatively small area, though there is access to the Buckhorn trail at this pullout.",
+   "accessibility": "A sidewalk provides accessible viewing of the cannonball concretions and of an interpretive exhibit. The cannonball concretions are located in an unpaved area which may include uneven ground and potential slip hazards. Proper footwear is recommended. Service animals are allowed, but must be on a leash no longer than 6 feet.",
+   "pets": "",
+   "lat": 47.596461,
+   "lon": -103.332433,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/EE4FF905-A96F-F09D-B3664194AE2B3D5B.jpg",
+    "credit": "NPS Photo/J. Zylland",
+    "alt": "Several large round rocks eroded out of the side of a butte. The sky above the butte is cloudy blue."
+   }
+  }
+ },
+ "places": {
+  "257B0079-1785-4C4C-90A7-A2D8EC718EBB": {
+   "title": "Badlands Overlook",
+   "url": "https://www.nps.gov/places/badlands-overlook.htm",
+   "summary": "Get a new perspective on the badlands of Theodore Roosevelt National Park's South Unit from this scenic vista.",
+   "amenities": [
+    "Scenic View/Photo Spot"
+   ],
+   "lat": 46.9219357970001,
+   "lon": -103.452207908,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/8A0EDDC9-E620-5CE5-52FED93A94755757.jpg",
+    "credit": "NPS Photo/L. Thomas",
+    "alt": "A view of colorful buttes under an overcast sky, with sunlight just breaking through"
+   }
+  },
+  "7E43270A-D8A5-4EED-B96A-28DAF9329A85": {
+   "title": "Boicourt Overlook",
+   "url": "https://www.nps.gov/places/boicourt-overlook.htm",
+   "summary": "Stop at this overlook to enjoy the awesome vista that is the Little Missouri Badlands.",
+   "amenities": [
+    "Cellular Signal",
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Parking - Bus/RV",
+    "Scenic View/Photo Spot",
+    "Trash/Litter Receptacles",
+    "Wheelchair Accessible"
+   ],
+   "lat": 46.963005,
+   "lon": -103.405403,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/F61364DB-064F-24D3-AEC758B3A8AFA1C3.jpg",
+    "credit": "NPS Photo/L.Thomas",
+    "alt": "A view across the badlands, with buttes visible on the horizon, and trees and valleys below."
+   }
+  },
+  "A9DDC05C-7CEC-4ACB-BBBE-5CD769C55BDA": {
+   "title": "Buck Hill",
+   "url": "https://www.nps.gov/places/buck-hill.htm",
+   "summary": "One of the highest points in the South Unit of Theodore Roosevelt National Park, Buck Hill offers incredible, 360° views.",
+   "amenities": [
+    "Cellular Signal",
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Scenic View/Photo Spot",
+    "Trailhead",
+    "Trash/Litter Receptacles"
+   ],
+   "lat": 46.9266083790001,
+   "lon": -103.389793638,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/2B10D8BF-BAE0-462B-9894217B848F67AF.jpg",
+    "credit": "NPS Photo/J. Bruce",
+    "alt": "A view looking down into a deep valley, with small buttes topped by dark trees."
+   }
+  },
+  "B367E30B-5FC0-4980-8A89-7139B2801523": {
+   "title": "Cannonball Concretions",
+   "url": "https://www.nps.gov/places/cannonball-concretions.htm",
+   "summary": "These unusual, round rock formations stand out against the broken landscape of the North Dakota badlands.",
+   "amenities": [
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Parking - Bus/RV",
+    "Scenic View/Photo Spot",
+    "Trash/Litter Receptacles"
+   ],
+   "lat": 47.5964320860001,
+   "lon": -103.332467436,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/F0E3DC3B-B362-2600-6A6B872C66D02324.jpg",
+    "credit": "NPS Photo/J. Zylland",
+    "alt": "Two large, round stones take up the majority of the image, with more behind, and a butte in the back"
+   }
+  },
+  "EAD0A579-C231-4E8E-AE62-EB0FF29E604D": {
+   "title": "Coal Vein Trailhead",
+   "url": "https://www.nps.gov/places/coal-vein-trailhead.htm",
+   "summary": "The trailhead for the Coal Vein Guided Nature Trail.",
+   "amenities": [
+    "Trailhead"
+   ],
+   "lat": 46.92449,
+   "lon": -103.40189,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/789CFA0E-B2F7-1BC3-A0FF817BAB28A696.jpg",
+    "credit": "NPS Photo/L. Eddy",
+    "alt": "A trailhead sign. Behind it, buttes rise against a blue sky, and grass and sage grow on the ground."
+   }
+  },
+  "3BF6876C-127E-4A49-8B81-7958E5D0B75D": {
+   "title": "Elkhorn Ranch Cabin Site",
+   "url": "https://www.nps.gov/places/elkhorn-ranch-cabin-site.htm",
+   "summary": "The original location of Theodore Roosevelt's Elkhorn Ranch Cabin.",
+   "amenities": [
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Scenic View/Photo Spot"
+   ],
+   "lat": 47.241898,
+   "lon": -103.622276,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/EE44E19D-B585-CB51-1C4B211057F93629.jpg",
+    "credit": "NPS Photo/L. Thomas",
+    "alt": "A view of a grassy field, with junipers in the background, as well as a butte under a blue sky."
+   }
+  },
+  "510530D4-64BA-4755-9E30-3FF9B7C954E3": {
+   "title": "Maltese Cross Cabin",
+   "url": "https://www.nps.gov/places/maltese-cross-cabin.htm",
+   "summary": "The first home of Theodore Roosevelt in the Little Missouri badlands of North Dakota.",
+   "amenities": [
+    "Benches/Seating",
+    "Historical/Interpretive Information/Exhibits",
+    "Scenic View/Photo Spot"
+   ],
+   "lat": 46.9169018110001,
+   "lon": -103.526235678,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/87E48C91-AC0A-3908-3444CE513CA0E347.jpg",
+    "credit": "NPS Photo/ B. Collins",
+    "alt": "A log cabin sits in a grassy area. Trees and a fence are visible behind it, and a sidewalk in front."
+   }
+  },
+  "7D5A46B3-DAD7-4E01-8326-001AF5FD3176": {
+   "title": "Oxbow Overlook",
+   "url": "https://www.nps.gov/places/oxbow-overlook.htm",
+   "summary": "Enjoy a stunning scenic vista of the meandering Little Missouri River surrounded by tall cottonwood trees and impressive buttes.",
+   "amenities": [
+    "Cellular Signal",
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Parking - Bus/RV",
+    "Picnic Table",
+    "Restroom",
+    "Scenic View/Photo Spot",
+    "Toilet - Vault/Composting",
+    "Trailhead",
+    "Trailhead/Hiker Register",
+    "Trash/Litter Receptacles",
+    "Wheelchair Accessible"
+   ],
+   "lat": 47.60272,
+   "lon": -103.441606,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/EE462B3E-0DDC-4E2B-F8DC41F101712154.jpg",
+    "credit": "NPS/L. Thomas",
+    "alt": "A river meanders through cottonwood trees and steep buttes."
+   }
+  },
+  "456C4F8C-859E-45B2-A4B2-0D29BAFEFAC6": {
+   "title": "Painted Canyon Overlook",
+   "url": "https://www.nps.gov/places/painted-canyon-overlook.htm",
+   "summary": "",
+   "amenities": [
+    "Information"
+   ],
+   "lat": 46.89585161100007,
+   "lon": -103.38154378599995,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/8D11ED1C-B0B6-9A5E-D35054B84401A243.jpg",
+    "credit": "",
+    "alt": "Painted Canyon"
+   }
+  },
+  "B5325964-009F-4CBB-9B3A-41B739ABFC69": {
+   "title": "Peaceful Valley Ranch",
+   "url": "https://www.nps.gov/places/peaceful-valley-ranch.htm",
+   "summary": "Once a dude ranch, the Peaceful Valley Ranch house and other buildings have served wide and varied purposes since first being built in the late 19th century.",
+   "amenities": [
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Picnic Table",
+    "Restroom",
+    "Scenic View/Photo Spot",
+    "Trash/Litter Receptacles"
+   ],
+   "lat": 46.958951,
+   "lon": -103.504139,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/BA914071-98B4-42FF-D5782176EB51F188.jpg",
+    "credit": "NPS Photo/ A. Myran",
+    "alt": "A winter scene, a white house sits next to a log building. Trees and buttes are behind them."
+   }
+  },
+  "0F2BC1FA-A626-4934-A7AA-8812211FC4DF": {
+   "title": "Prairie Dog Colony Pulloff",
+   "url": "https://www.nps.gov/places/prairie-dog-colony-pulloff.htm",
+   "summary": "",
+   "amenities": [],
+   "lat": 46.95380921800006,
+   "lon": -103.50921830799996,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/FAA15232-B9EC-EA76-9A4A5AEC7226E097.jpg",
+    "credit": "",
+    "alt": "Double Rainbow Prairie Dog Town"
+   }
+  },
+  "00033499-52E2-4DE1-BCFE-F20E64F5312A": {
+   "title": "Ridgeline Nature Trail",
+   "url": "https://www.nps.gov/places/ridgeline-nature-trail.htm",
+   "summary": "",
+   "amenities": [
+    "Trailhead"
+   ],
+   "lat": 46.92189494200005,
+   "lon": -103.46307761199995,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/FB3BF7CE-F583-804B-DDEFC7EC5B87D0D5.jpg",
+    "credit": "",
+    "alt": "Ridgeline Nature Trail"
+   }
+  },
+  "C627B675-3878-4F43-AD4B-A689A7D9D8BA": {
+   "title": "River Bend Overlook",
+   "url": "https://www.nps.gov/places/river-bend-overlook.htm",
+   "summary": "A shelter built by the CCC at River Bend Overlook, with a beautiful view of the surrounding badlands.",
+   "amenities": [
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Parking - Bus/RV",
+    "Scenic View/Photo Spot",
+    "Trash/Litter Receptacles"
+   ],
+   "lat": 47.608948,
+   "lon": -103.377894,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/7FD2405A-A8A5-CCB0-D980ACFC53A8DC71.jpg",
+    "credit": "NPS Photo/C. Sandvick",
+    "alt": "A small stone shelter with a low pitched roof stands at the edge of a butte overlooking a river."
+   }
+  },
+  "12CE9A31-5D4D-465A-98C4-41B4C8E43DCB": {
+   "title": "Scoria Point Overlook",
+   "url": "https://www.nps.gov/places/scoria-point-overlook.htm",
+   "summary": "",
+   "amenities": [],
+   "lat": 46.93148398200003,
+   "lon": -103.48534963499998,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/0036DA89-B049-D3D1-24F20C77C2DB5500.jpg",
+    "credit": "",
+    "alt": "Wet Bison on Road"
+   }
+  },
+  "DDB76BB3-A845-48A0-9455-62D45A33B9B7": {
+   "title": "Skyline Vista",
+   "url": "https://www.nps.gov/places/skyline-vista.htm",
+   "summary": "Skyline Vista Trail is a great accessible introduction to Theodore Roosevelt National Park.",
+   "amenities": [
+    "Benches/Seating",
+    "Cellular Signal",
+    "Historical/Interpretive Information/Exhibits",
+    "Parking - Auto",
+    "Parking - Bus/RV",
+    "Scenic View/Photo Spot",
+    "Trash/Litter Receptacles",
+    "Wheelchair Accessible"
+   ],
+   "lat": 46.934089,
+   "lon": -103.532985,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/5AA0DEF5-CC20-10B4-D4E55A3759823677.jpg",
+    "credit": "NPS Photo",
+    "alt": "A view across a valley in Theodore Roosevelt National Park, under a blue sky."
+   }
+  },
+  "C383AB68-A193-45F0-A108-F1199884A122": {
+   "title": "Wind Canyon",
+   "url": "https://www.nps.gov/places/wind-canyon.htm",
+   "summary": "The gusty winds that give Wind Canyon its name have also carved it into a beautiful and fascinating place.",
+   "amenities": [
+    "Parking - Auto",
+    "Parking - Bus/RV",
+    "Scenic View/Photo Spot",
+    "Trash/Litter Receptacles"
+   ],
+   "lat": 46.988682,
+   "lon": -103.485281,
+   "image": {
+    "url": "https://www.nps.gov/common/uploads/cropped_image/F6367D68-DFF1-F7DF-1518560FDA6BC440.jpg",
+    "credit": "NPS Photo",
+    "alt": "A view down Wind Canyon toward the river. Green trees line a grassy trail at the bottom."
+   }
+  }
+ },
+ "visitorCenters": [
+  {
+   "id": "C9958AEB-179B-42E8-BB11-7312495576A9",
+   "name": "North Unit Visitor Center",
+   "url": "http://www.nps.gov/thro/planyourvisit/visitorcenters.htm",
+   "lat": 47.6,
+   "lon": -103.2601,
+   "hours": [
+    {
+     "name": "North Unit Visitor Center",
+     "standard": {
+      "wednesday": "9:00AM - 5:00PM",
+      "monday": "9:00AM - 5:00PM",
+      "thursday": "9:00AM - 5:00PM",
+      "sunday": "9:00AM - 5:00PM",
+      "tuesday": "9:00AM - 5:00PM",
+      "friday": "9:00AM - 5:00PM",
+      "saturday": "9:00AM - 5:00PM"
+     },
+     "exceptions": [
+      {
+       "name": "WINTER HOURS (SEPTEMBER - JUNE)",
+       "start": "2026-09-08",
+       "end": "2027-05-30",
+       "hours": {
+        "wednesday": "9:00AM - 4:30PM",
+        "monday": "9:00AM - 4:30PM",
+        "thursday": "9:00AM - 4:30PM",
+        "sunday": "9:00AM - 4:30PM",
+        "tuesday": "9:00AM - 4:30PM",
+        "friday": "9:00AM - 4:30PM",
+        "saturday": "9:00AM - 4:30PM"
+       }
+      },
+      {
+       "name": "Closed Christmas Day",
+       "start": "2026-12-25",
+       "end": "2026-12-25",
+       "hours": {
+        "wednesday": "Closed",
+        "monday": "Closed",
+        "thursday": "Closed",
+        "sunday": "Closed",
+        "tuesday": "Closed",
+        "friday": "Closed",
+        "saturday": "Closed"
+       }
+      },
+      {
+       "name": "Closed New Year's Day",
+       "start": "2027-01-01",
+       "end": "2027-01-01",
+       "hours": {
+        "wednesday": "Closed",
+        "monday": "Closed",
+        "thursday": "Closed",
+        "sunday": "Closed",
+        "tuesday": "Closed",
+        "friday": "Closed",
+        "saturday": "Closed"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "AAFEF26B-FF98-4BA9-8150-35293FD5DCF2",
+   "name": "South Unit Visitor Center",
+   "url": "http://www.nps.gov/thro/planyourvisit/visitorcenters.htm",
+   "lat": 46.9164980360001,
+   "lon": -103.526209062,
+   "hours": [
+    {
+     "name": "South Unit Visitor Center",
+     "standard": {
+      "wednesday": "8:00AM - 5:00PM",
+      "monday": "8:00AM - 5:00PM",
+      "thursday": "8:00AM - 5:00PM",
+      "sunday": "8:00AM - 5:00PM",
+      "tuesday": "8:00AM - 5:00PM",
+      "friday": "8:00AM - 5:00PM",
+      "saturday": "8:00AM - 5:00PM"
+     },
+     "exceptions": [
+      {
+       "name": "WINTER HOURS (October - May)",
+       "start": "2026-10-01",
+       "end": "2027-05-24",
+       "hours": {
+        "wednesday": "9:00AM - 4:30PM",
+        "monday": "9:00AM - 4:30PM",
+        "thursday": "9:00AM - 4:30PM",
+        "sunday": "9:00AM - 4:30PM",
+        "tuesday": "9:00AM - 4:30PM",
+        "friday": "9:00AM - 4:30PM",
+        "saturday": "9:00AM - 4:30PM"
+       }
+      },
+      {
+       "name": "Closed Thanksgiving Day",
+       "start": "2026-11-26",
+       "end": "2026-11-26",
+       "hours": {
+        "thursday": "Closed"
+       }
+      },
+      {
+       "name": "Closed Christmas Day",
+       "start": "2026-12-25",
+       "end": "2026-12-25",
+       "hours": {
+        "wednesday": "Closed",
+        "monday": "Closed",
+        "thursday": "Closed",
+        "sunday": "Closed",
+        "tuesday": "Closed",
+        "friday": "Closed",
+        "saturday": "Closed"
+       }
+      },
+      {
+       "name": "Closed New Year's Day",
+       "start": "2027-01-01",
+       "end": "2027-01-01",
+       "hours": {
+        "wednesday": "Closed",
+        "monday": "Closed",
+        "thursday": "Closed",
+        "sunday": "Closed",
+        "tuesday": "Closed",
+        "friday": "Closed",
+        "saturday": "Closed"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "137BA69D-22BA-47D9-B00D-CDE4584687B5",
+   "name": "Painted Canyon Visitor Center",
+   "url": "http://www.nps.gov/thro/planyourvisit/visitorcenters.htm",
+   "lat": 46.8954875850001,
+   "lon": -103.381780253,
+   "hours": [
+    {
+     "name": "Painted Canyon Visitor Center",
+     "standard": {
+      "wednesday": "9:00AM - 4:30PM",
+      "monday": "9:00AM - 4:30PM",
+      "thursday": "9:00AM - 4:30PM",
+      "sunday": "9:00AM - 4:30PM",
+      "tuesday": "9:00AM - 4:30PM",
+      "friday": "9:00AM - 4:30PM",
+      "saturday": "9:00AM - 4:30PM"
+     },
+     "exceptions": [
+      {
+       "name": "Winter Closure October 24th thru Mid June",
+       "start": "2026-10-25",
+       "end": "2027-06-15",
+       "hours": {
+        "wednesday": "Closed",
+        "monday": "Closed",
+        "thursday": "Closed",
+        "sunday": "Closed",
+        "tuesday": "Closed",
+        "friday": "Closed",
+        "saturday": "Closed"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "updated": "2026-10-10T05:56:00.386Z",
+ "source": "National Park Service API (developer.nps.gov), park code thro"
+}
