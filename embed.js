@@ -17,7 +17,7 @@
   "use strict";
   var ORIGIN = "https://trnp-planner.labs.trlibrary.com";
   try { var me = document.currentScript && document.currentScript.src; if (me) ORIGIN = new URL(me).origin; } catch (e) {}
-  var V = "3";
+  var V = "4";
   var LEAFLET = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/";
 
   function css(href) {
@@ -33,8 +33,20 @@
   css(LEAFLET + "leaflet.min.css");
   css(ORIGIN + "/assets/planner.css?v=" + V);
 
+  // The host page may have its own global "L" (trlibrary.com does). Load Leaflet, keep a
+  // private handle to it, and hand the host's "L" back untouched.
+  function leaflet() {
+    if (window.TPLeaflet) return null;
+    var prev = window.L;
+    if (prev && typeof prev.map === "function" && prev.version) { window.TPLeaflet = prev; return null; }
+    return js(LEAFLET + "leaflet.min.js").then(function () {
+      window.TPLeaflet = (window.L && window.L.noConflict) ? window.L.noConflict() : window.L;
+      if (prev !== undefined) window.L = prev;
+    });
+  }
+
   var ready = Promise.all([
-    window.L ? null : js(LEAFLET + "leaflet.min.js"),
+    leaflet(),
     window.WWSun ? null : js(ORIGIN + "/assets/sun.js?v=" + V),
     window.TRPlanner ? null : js(ORIGIN + "/assets/planner.js?v=" + V),
   ]).then(function () {

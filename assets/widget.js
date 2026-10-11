@@ -245,7 +245,7 @@
       html += altPlan(r, input);
       html += '</div><div class="tp-mapbox"><div class="tp-map" role="region" aria-label="Map of the route"></div><div class="tp-mapnote">Stops in order, joined by straight lines. Use Directions for turn-by-turn.</div></div></div>';
       res.innerHTML = html;
-      drawMap(r);
+      try { drawMap(r); } catch (e) { var mb = $(".tp-mapbox"); if (mb) mb.style.display = "none"; if (window.console) console.error("TRNP planner map", e); }
     }
 
     function altPlan(r, input) {
@@ -281,7 +281,8 @@
     function drawMap(r) {
       clearMap();
       var el = $(".tp-map");
-      if (!window.L || !el) return;
+      var L = window.TPLeaflet || window.L;
+      if (!L || typeof L.map !== "function" || !el) { if (el) el.parentNode.style.display = "none"; return; }
       map = L.map(el, { scrollWheelZoom: false });
       L.tileLayer("https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}", {
         maxZoom: 16, attribution: 'Tiles: <a href="https://www.usgs.gov/programs/national-geospatial-program/national-map">USGS The National Map</a>',
